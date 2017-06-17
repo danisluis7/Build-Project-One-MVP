@@ -1,2 +1,1 @@
-# Build-Project-One-MVP
-MVP
+<p align="center">WELCOME TO LEARN AND DEVELOP ANDROID PROJECT</p>
