@@ -5,15 +5,11 @@
 ## Configurate Theme Full Screen
     + Understand attribute: windowContentOverlay in android
 <p align="center">
-    <image src="" alt="1.png"/>
+    <image src="https://github.com/danisluis7/Build-Project-One-MVP/blob/master/1.png" alt="1.png"/>
 </p>
     + Understand attribute: windowNoTitle in android
 <p align="center">
-    <image src="" alt="2.png"/>
-</p>
-    + The result show below
-<p align="center">
-    <image src="" alt="3.png"/>
+    <image src="https://github.com/danisluis7/Build-Project-One-MVP/blob/master/2.png" alt="2.png"/>
 </p>
 
         <!-- Splash Screen Theme -->
