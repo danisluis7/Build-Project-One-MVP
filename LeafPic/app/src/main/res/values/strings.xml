@@ -1,7 +1,11 @@
 <resources>
 
     <!-- Splash Screeen -->
-    <string name="splash_screen_label">Hello World</string>
+
+    <string name="splash_screen_label">LeafPic</string>
+    <string name="activity_splash_screen_title">Lorence</string>
+    <!-- -->
+
 
     <string name="app_name">LeafPic</string>
 

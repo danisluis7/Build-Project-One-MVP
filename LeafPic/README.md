@@ -2,6 +2,8 @@
 
 - [Configurate Theme Full Screen](#configurate-theme-full-screen)
 - [Configurate Icon Launch In Android](#configurate-icon-launch-in-android)
+- [Configurate These Attributes In Android](#configurate-these-attributes-in-android)
+- [Using class Abstract in Android](#using-class-abstract-in-android)
 
 ## Configurate Theme Full Screen
     + Understand attribute: windowContentOverlay in android
@@ -31,3 +33,29 @@
 </p>
     + Both two files will be designed in AI with two format is .png and .svg
     + Put them into mindmap and test
+
+## Configurate These Attributes In Android
+<p align="center">
+    <image src="https://github.com/danisluis7/Build-Project-One-MVP/blob/master/3.jpeg" alt="3.jpeg"/>
+</p>
+
+## Using class Abstract in Android
+
+   + I wanna use method setStatusBar();
+<p align="center">
+    <image src="https://github.com/danisluis7/Build-Project-One-MVP/blob/master/4.png" alt="4.png"/>
+</p>
+<p align="center">
+    <image src="https://github.com/danisluis7/Build-Project-One-MVP/blob/master/5.png" alt="5.png"/>
+</p>
+<p align="center">
+    <image src="https://github.com/danisluis7/Build-Project-One-MVP/blob/master/6.png" alt="6.png"/>
+</p>
+<p align="center">
+    <image src="https://github.com/danisluis7/Build-Project-One-MVP/blob/master/7.png" alt="7.png"/>
+</p>
+
+    + Set NavigationBarColor() or hidden it.
+<p align="center">
+    <image src="https://github.com/danisluis7/Build-Project-One-MVP/blob/master/8.png" alt="8.png"/>
+</p>

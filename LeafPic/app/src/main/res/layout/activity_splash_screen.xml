@@ -5,4 +5,35 @@
     android:layout_height="match_parent"
     tools:context="vuongluis.leafpic.activities.SplashScreen.SplashScreen">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:id="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/activity_splash_screen_logo"
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"/>
+        <ProgressBar
+            android:id="@+id/activity_splash_screen_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_splash_screen_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_splash_screen_title"
+        android:textColor="@color/md_teal_500"
+        android:textSize="36dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
