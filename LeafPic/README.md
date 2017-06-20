@@ -4,6 +4,10 @@
 - [Configurate Icon Launch In Android](#configurate-icon-launch-in-android)
 - [Configurate These Attributes In Android](#configurate-these-attributes-in-android)
 - [Using class Abstract in Android](#using-class-abstract-in-android)
+- [Where is place to check permission](#where-is-place-to-check-permission)
+
+
+- [Get Album contain images](#get-album-contain-images)
 
 ## Configurate Theme Full Screen
     + Understand attribute: windowContentOverlay in android
@@ -59,3 +63,74 @@
 <p align="center">
     <image src="https://github.com/danisluis7/Build-Project-One-MVP/blob/master/8.png" alt="8.png"/>
 </p>
+
+## Where is place to check permission
+
+    + isDeviceInfoGranted specify what is it?
+<p align="center">
+    <image src="https://github.com/danisluis7/Build-Project-One-MVP/blob/master/9.png" alt="9.png"/>
+</p>
+
+    + Final Class with method(static) to check permission and request permission for Activity
+
+        public final class PermissionUtils {
+
+            // Indirectly to check permission from Activity
+            public static boolean isDeviceInfoGranted (Context context) {
+                return checkPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE);
+            }
+
+            private static boolean checkPermission (Context context, String permission) {
+                return ContextCompat.checkSelfPermission(context, permission) == PackageManager.PERMISSION_GRANTED;
+            }
+
+            /**
+             * Directly to check permission from Activity
+             * ... => difference with another method, represent an array methods
+             */
+            public static boolean checkPermission (Context context, String... permissions){
+                for (String permission : permissions) {
+                    if (!checkPermission(context, permission)) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            /**
+             * Request permission
+             */
+            public static void requestPermission (Object o, int permissionId, String... permissions) {
+                if (o instanceof Activity) {
+                    ActivityCompat.requestPermissions((AppCompatActivity) o, permissions, permissionId);
+                }
+            }
+        }
+
+## Get Album contain images
+
+    + Congifure IntentFilter() in ManifestAndroid.xml and put content is OPEN_ALBUM. It looks like below
+
+            <intent-filter>
+                <action android:name="com.horaapps.leafpic.OPEN_ALBUM" />
+            </intent-filter>
+
+    + Explaining
+
+    // LINE 2 => Get data from other object INTENT
+
+        - I'm creating an intent to transfer data from one activity to another like this :
+            Intent intent = new Intent(this, ActivityHighScore.class);
+            intent.putExtra("USERNAME", username);
+            intent.putExtra("PLAYERMOVES", playerMoves);
+
+            this.startActivity(intent);
+        - Then i want to check if all of this data exists as the activity starts, as it can be started from other sources without this data being set. Im using this statement:
+            Bundle bundle = getIntent().getExtras();
+            if (!bundle.getString("USERNAME").equals(null) && bundle.getInt("PLAYERMOVES") != 0){
+                String username = bundle.getString("USERNAME");
+                int playerMoves = bundle.getInt("PLAYERMOVES");
+                addHighScore(username, playerMoves);
+
+            }
+
